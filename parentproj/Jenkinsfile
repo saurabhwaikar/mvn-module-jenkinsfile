@@ -9,7 +9,7 @@ pipeline {
 	    	// steps{
 	        	 git branch: 'master',
 	    		credentialsId: 'a1aa10b3-85ab-4296-a59a-5d6f78604ea2',
-	    		url: 'ssh://git@bitbucket.org:company/repo.git'
+	    		url: 'https://github.com/saurabhwaikar/mvn-module-jenkinsfile.git'
 	    	// }   	  
     	}
     	
