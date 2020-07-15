@@ -6,11 +6,11 @@ pipeline {
     
 	stages {
 	    stage('GIT Checkout') {
-	    	// steps{
+	    	steps{
 	        	 git branch: 'master',
 	    		credentialsId: 'a1aa10b3-85ab-4296-a59a-5d6f78604ea2',
 	    		url: 'https://github.com/saurabhwaikar/mvn-module-jenkinsfile.git'
-	    	// }   	  
+	    	}   	  
     	}
     	
     	stage('MVN Build'){
