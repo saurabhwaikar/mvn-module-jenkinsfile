@@ -10,12 +10,19 @@ pipeline {
     	}
     	
     	stage('MVN Build'){
-		steps {
-			sh 'mvn -f parentproj/pom.xml package'    // As pom.xml in inside parent project need to give full path
-		}
-    	   
+			steps {
+				sh 'mvn -f parentproj/pom.xml package'    // As pom.xml in inside parent project need to give full path
+			}
     	}
 
+		stage('Deploy to Tomcat'){
+			steps {
+				deploy adapters: [tomcat8(credentialsId: 'tomcat-deployer', path: '', 
+								url: 'http://localhost:8121')], 
+						contextPath: '/modulone', 
+						war: '/var/lib/jenkins/workspace/maven-module-jenkinsfile/parentproj/childmoduleone/target/childmoduleone-0.0.1-SNAPSHOT.war'
+			}
+    	}
 	}
 	
 }
