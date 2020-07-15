@@ -11,7 +11,7 @@ pipeline {
     	
     	stage('MVN Build'){
 		steps {
-			sh 'mvn package'
+			sh 'mvn -f parentproj/pom.xml package'    // As pom.xml in inside parent project need to give full path
 		}
     	   
     	}
