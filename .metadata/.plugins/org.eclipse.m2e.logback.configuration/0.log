@@ -1,0 +1,382 @@
+2020-07-15 14:06:21,344 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-07-15 14:07:35,983 [Worker-3: Creating project "parentproj"] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int:parentproj:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/pom.xml.
+2020-07-15 14:07:37,177 [Worker-3: Creating project "parentproj"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /parentproj/src/main/java
+2020-07-15 14:07:37,179 [Worker-3: Creating project "parentproj"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /parentproj/src/main/resources
+2020-07-15 14:07:37,180 [Worker-3: Creating project "parentproj"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /parentproj/src/test/java
+2020-07-15 14:07:37,181 [Worker-3: Creating project "parentproj"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /parentproj/src/test/resources
+2020-07-15 14:07:40,196 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:07:40,203 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:07:40,206 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:07:40,207 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:07:57,423 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:07:57,435 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:07:57,437 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:07:57,438 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:08:58,334 [Worker-1: Creating project "childModuleOne"] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.int:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:08:58,902 [Worker-1: Creating project "childModuleOne"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /childModuleOne/src/main/resources
+2020-07-15 14:08:58,903 [Worker-1: Creating project "childModuleOne"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /childModuleOne/src/test/resources
+2020-07-15 14:09:19,755 [Worker-1: reload maven project] ERROR o.e.m2e.editor.pom.MavenPomEditor - failed to load maven project for org.eclipse.ui.part.FileEditorInput(/childModuleOne/pom.xml)
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:847) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$22(ProjectRegistryManager.java:1064) ~[na:na]
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4878) ~[na:na]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3529) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2278) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2155) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2045) ~[na:na]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953) ~[na:na]
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4873) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1063) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:244) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261) ~[org.eclipse.m2e.core.ui_1.15.0.20200120-1354.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:717) ~[na:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$3.run(MavenPomEditor.java:1043) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
+2020-07-15 14:09:39,632 [Worker-4: reload maven project] ERROR o.e.m2e.editor.pom.MavenPomEditor - failed to load maven project for org.eclipse.ui.part.FileEditorInput(/childModuleOne/pom.xml)
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:847) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$22(ProjectRegistryManager.java:1064) ~[na:na]
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4878) ~[na:na]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3529) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2278) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2155) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2045) ~[na:na]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953) ~[na:na]
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4873) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1063) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:244) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261) ~[org.eclipse.m2e.core.ui_1.15.0.20200120-1354.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:717) ~[na:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$3.run(MavenPomEditor.java:1043) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
+2020-07-15 14:09:39,818 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.int.cone:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:09:40,284 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:09:40,285 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:09:40,287 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:09:40,288 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:10:40,263 [Worker-6: reload maven project] ERROR o.e.m2e.editor.pom.MavenPomEditor - failed to load maven project for org.eclipse.ui.part.FileEditorInput(/childModuleOne/pom.xml)
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:847) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$22(ProjectRegistryManager.java:1064) ~[na:na]
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4878) ~[na:na]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3529) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2278) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2155) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2045) ~[na:na]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953) ~[na:na]
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4873) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1063) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:244) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261) ~[org.eclipse.m2e.core.ui_1.15.0.20200120-1354.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:717) ~[na:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$3.run(MavenPomEditor.java:1043) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
+2020-07-15 14:10:40,407 [Worker-7: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.int.cone:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:11:18,266 [Worker-7: reload maven project] ERROR o.e.m2e.editor.pom.MavenPomEditor - failed to load maven project for org.eclipse.ui.part.FileEditorInput(/childModuleOne/pom.xml)
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:847) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$22(ProjectRegistryManager.java:1064) ~[na:na]
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4878) ~[na:na]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3529) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2278) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2155) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2045) ~[na:na]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953) ~[na:na]
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4873) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1063) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:244) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261) ~[org.eclipse.m2e.core.ui_1.15.0.20200120-1354.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:717) ~[na:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$3.run(MavenPomEditor.java:1043) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
+2020-07-15 14:11:18,457 [Worker-2: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int.cone:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:11:18,639 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:11:18,640 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:11:18,641 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:11:18,643 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:11:18,644 [Worker-2: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childModuleOne
+2020-07-15 14:11:18,645 [Worker-2: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childModuleOne
+2020-07-15 14:11:18,653 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:11:26,100 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.int:parentproj:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/pom.xml.
+2020-07-15 14:11:26,480 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int.cone:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:11:30,171 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:11:30,174 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:11:30,176 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:11:30,177 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:11:51,464 [Worker-3: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-07-15 14:11:51,497 [Worker-3: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.int:parentproj:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/pom.xml.
+2020-07-15 14:11:51,851 [Worker-3: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int.cone:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:11:52,316 [Worker-3: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /childModuleOne/src/main/java
+2020-07-15 14:11:52,316 [Worker-3: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /childModuleOne/src/main/resources
+2020-07-15 14:11:52,317 [Worker-3: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /childModuleOne/src/test/java
+2020-07-15 14:11:52,317 [Worker-3: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /childModuleOne/src/test/resources
+2020-07-15 14:11:52,745 [Worker-3: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for childModuleOne
+2020-07-15 14:11:52,765 [Worker-3: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2020-07-15 14:11:53,008 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:11:53,009 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:11:53,012 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:11:53,013 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:11:53,013 [Worker-9: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childModuleOne
+2020-07-15 14:11:53,013 [Worker-9: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childModuleOne
+2020-07-15 14:11:53,021 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:12:11,203 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:12:11,205 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:12:11,207 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:12:11,208 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:12:30,571 [Worker-7: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-07-15 14:12:30,592 [Worker-7: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.int:parentproj:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/pom.xml.
+2020-07-15 14:12:30,908 [Worker-7: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int.cone:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:12:31,365 [Worker-7: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2020-07-15 14:12:31,590 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:12:31,592 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:12:31,594 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:12:31,594 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:13:36,187 [Worker-7: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.int:parentproj:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/pom.xml.
+2020-07-15 14:13:36,495 [Worker-7: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int.cone:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:13:39,294 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:13:39,296 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:13:39,298 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:13:39,299 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:14:17,295 [Worker-4: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj
+2020-07-15 14:14:17,296 [Worker-4: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:14:50,814 [Worker-4: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childModuleOne] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne
+2020-07-15 14:14:50,814 [Worker-4: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childModuleOne] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:18:27,054 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.int:parentproj:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/pom.xml.
+2020-07-15 14:18:27,262 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int.cone:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:18:29,979 [Worker-12: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:18:29,981 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:18:29,983 [Worker-12: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:18:29,984 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:20:00,833 [Worker-10: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int.cone:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:20:01,105 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:20:01,106 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:20:01,108 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:20:01,109 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:20:01,109 [Worker-10: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childModuleOne
+2020-07-15 14:20:01,109 [Worker-10: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childModuleOne
+2020-07-15 14:20:01,112 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:20:16,978 [Worker-10: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-07-15 14:20:17,020 [Worker-10: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.int:parentproj:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/pom.xml.
+2020-07-15 14:20:17,292 [Worker-10: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int.cone:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:20:17,704 [Worker-10: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2020-07-15 14:20:17,993 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:20:18,002 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:20:18,010 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:20:18,010 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:20:50,635 [Worker-12: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childModuleOne] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne
+2020-07-15 14:20:50,635 [Worker-12: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childModuleOne] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:23:01,216 [Worker-15: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:23:01,594 [Worker-15: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:23:01,596 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:23:01,597 [Worker-15: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:23:01,597 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:23:01,598 [Worker-15: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childModuleOne
+2020-07-15 14:23:01,598 [Worker-15: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childModuleOne
+2020-07-15 14:23:01,600 [Worker-15: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:23:12,902 [Worker-17: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childModuleOne] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne
+2020-07-15 14:23:12,902 [Worker-17: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childModuleOne] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:24:17,927 [Worker-17: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:24:18,264 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:24:18,267 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:24:18,271 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:24:18,274 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:24:18,275 [Worker-17: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childModuleOne
+2020-07-15 14:24:18,277 [Worker-17: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childModuleOne
+2020-07-15 14:24:18,280 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:24:27,099 [Worker-18: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childModuleOne] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne
+2020-07-15 14:24:27,099 [Worker-18: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childModuleOne] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:25:27,797 [Worker-15: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:25:28,102 [Worker-15: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:25:28,104 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:25:28,105 [Worker-15: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:25:28,106 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:25:28,106 [Worker-15: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childModuleOne
+2020-07-15 14:25:28,106 [Worker-15: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childModuleOne
+2020-07-15 14:25:28,110 [Worker-15: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:25:56,114 [Worker-17: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:25:56,469 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:25:56,473 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:25:56,476 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:25:56,477 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:25:56,477 [Worker-17: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childModuleOne
+2020-07-15 14:25:56,477 [Worker-17: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childModuleOne
+2020-07-15 14:25:56,481 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:26:08,078 [Worker-13: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childModuleOne] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne
+2020-07-15 14:26:08,079 [Worker-13: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childModuleOne] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:26:09,688 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:26:09,691 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:26:09,692 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:26:09,693 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:26:09,693 [Worker-19: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childModuleOne
+2020-07-15 14:26:09,693 [Worker-19: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childModuleOne
+2020-07-15 14:26:09,697 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:26:24,498 [Worker-15: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj
+2020-07-15 14:26:24,498 [Worker-15: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:34:35,946 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:34:35,946 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:34:35,947 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:34:35,948 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:35:01,460 [Worker-23: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childModuleOne] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne
+2020-07-15 14:35:01,460 [Worker-23: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childModuleOne] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:35:03,024 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:35:03,024 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:35:03,025 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:35:03,026 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:35:03,026 [Worker-21: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childModuleOne
+2020-07-15 14:35:03,026 [Worker-21: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childModuleOne
+2020-07-15 14:35:03,029 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:35:13,692 [Worker-13: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj
+2020-07-15 14:35:13,692 [Worker-13: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:39:15,556 [Worker-21: Creating project "childprojtwo"] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int:childprojtwo:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childprojtwo/pom.xml.
+2020-07-15 14:39:15,659 [Worker-21: Creating project "childprojtwo"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /childprojtwo/src/main/java
+2020-07-15 14:39:15,660 [Worker-21: Creating project "childprojtwo"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /childprojtwo/src/main/resources
+2020-07-15 14:39:15,660 [Worker-21: Creating project "childprojtwo"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /childprojtwo/src/test/java
+2020-07-15 14:39:15,660 [Worker-21: Creating project "childprojtwo"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /childprojtwo/src/test/resources
+2020-07-15 14:39:15,958 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:39:15,958 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:39:15,959 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:39:15,960 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:39:19,239 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:39:19,240 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:39:19,241 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:39:19,242 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:39:28,566 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:39:28,567 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:39:28,567 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:39:28,568 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:39:47,585 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:39:47,585 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:39:47,587 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:39:47,587 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:39:55,017 [Worker-26: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childprojtwo] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/childprojtwo
+2020-07-15 14:39:55,017 [Worker-26: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childprojtwo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:40:37,168 [Worker-21: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int:childprojtwo:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childprojtwo/pom.xml.
+2020-07-15 14:40:37,476 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:40:37,477 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:40:37,478 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:40:37,479 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:40:37,479 [Worker-21: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childprojtwo
+2020-07-15 14:40:37,479 [Worker-21: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childprojtwo
+2020-07-15 14:40:37,482 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:40:48,395 [Worker-24: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childprojtwo] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/childprojtwo
+2020-07-15 14:40:48,395 [Worker-24: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childprojtwo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:40:49,980 [Worker-26: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:40:49,981 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:40:49,982 [Worker-26: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:40:49,982 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:40:49,983 [Worker-26: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childprojtwo
+2020-07-15 14:40:49,983 [Worker-26: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childprojtwo
+2020-07-15 14:40:49,986 [Worker-26: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:41:00,707 [Worker-21: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.int:parentproj:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/pom.xml.
+2020-07-15 14:41:00,861 [Worker-21: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int:childprojtwo:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childprojtwo/pom.xml.
+2020-07-15 14:41:00,873 [Worker-21: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int:childModuleOne:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childModuleOne/pom.xml.
+2020-07-15 14:41:04,020 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:41:04,021 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:41:04,023 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:41:04,023 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:41:04,112 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:41:04,113 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:41:04,115 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:41:04,116 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:41:05,672 [Worker-22: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj
+2020-07-15 14:41:05,672 [Worker-22: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:43:05,409 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:43:05,411 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:43:05,413 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:43:05,413 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:43:17,509 [Worker-29: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-07-15 14:43:17,518 [Worker-29: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.int:parentproj:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/pom.xml.
+2020-07-15 14:43:17,696 [Worker-29: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int:childprojtwo:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childprojtwo/pom.xml.
+2020-07-15 14:43:17,991 [Worker-29: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /childprojtwo/src/main/java
+2020-07-15 14:43:17,992 [Worker-29: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /childprojtwo/src/main/resources
+2020-07-15 14:43:17,992 [Worker-29: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /childprojtwo/src/test/java
+2020-07-15 14:43:17,992 [Worker-29: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /childprojtwo/src/test/resources
+2020-07-15 14:43:18,139 [Worker-29: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for childprojtwo
+2020-07-15 14:43:18,153 [Worker-29: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2020-07-15 14:43:18,290 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:43:18,294 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:43:18,295 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:43:18,296 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:43:18,296 [Worker-29: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childprojtwo
+2020-07-15 14:43:18,296 [Worker-29: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childprojtwo
+2020-07-15 14:43:18,299 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:44:33,399 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:44:33,401 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:44:33,403 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:44:33,403 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:44:52,615 [Worker-28: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for childprojtwo
+2020-07-15 14:44:52,776 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:44:52,777 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:44:52,779 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:44:52,779 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:44:52,780 [Worker-30: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childprojtwo
+2020-07-15 14:44:52,780 [Worker-30: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childprojtwo
+2020-07-15 14:44:52,784 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:46:23,670 [Worker-25: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childprojtwo] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/childprojtwo
+2020-07-15 14:46:23,670 [Worker-25: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_childprojtwo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:46:25,170 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:46:25,171 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:46:25,171 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:46:25,172 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:46:25,172 [Worker-24: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of childprojtwo
+2020-07-15 14:46:25,172 [Worker-24: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for childprojtwo
+2020-07-15 14:46:25,174 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:46:30,626 [Worker-25: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj
+2020-07-15 14:46:30,626 [Worker-25: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:47:01,194 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2020-07-15 14:47:10,977 [Worker-29: Launching parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj
+2020-07-15 14:47:10,978 [Worker-29: Launching parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B mvn clean -e -Dstyle.color=always
+2020-07-15 14:51:17,392 [Worker-25: Creating project "childmoduleone"] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.int:childmoduleone:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/childmoduleone/pom.xml.
+2020-07-15 14:51:17,710 [Worker-25: Creating project "childmoduleone"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /childmoduleone/src/main/java
+2020-07-15 14:51:17,710 [Worker-25: Creating project "childmoduleone"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /childmoduleone/src/main/resources
+2020-07-15 14:51:17,710 [Worker-25: Creating project "childmoduleone"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /childmoduleone/src/test/java
+2020-07-15 14:51:17,710 [Worker-25: Creating project "childmoduleone"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /childmoduleone/src/test/resources
+2020-07-15 14:51:17,906 [Worker-34: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:51:17,907 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:51:17,908 [Worker-34: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:51:17,908 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:51:20,423 [Worker-32: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.int:parentproj:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/pom.xml.
+2020-07-15 14:51:20,565 [Worker-32: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int:childprojtwo:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childprojtwo/pom.xml.
+2020-07-15 14:51:20,578 [Worker-32: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.int:childmoduleone:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/childmoduleone/pom.xml.
+2020-07-15 14:51:24,137 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:51:24,138 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:51:24,140 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:51:24,141 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:51:24,149 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:51:24,149 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:51:24,150 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:51:24,150 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:51:47,440 [Worker-35: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj_childmoduleone] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/childmoduleone
+2020-07-15 14:51:47,441 [Worker-35: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj_childmoduleone] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:51:49,025 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:51:49,026 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:51:49,026 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:51:49,027 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:52:04,546 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.int:parentproj:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/pom.xml.
+2020-07-15 14:52:04,643 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.int:childprojtwo:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/childprojtwo/pom.xml.
+2020-07-15 14:52:04,660 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.int:childmoduleone:0.0.1-SNAPSHOT @ /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj/childmoduleone/pom.xml.
+2020-07-15 14:52:06,929 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:52:06,931 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:52:06,933 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:52:06,933 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:52:06,944 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:52:06,945 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:52:06,946 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:52:06,946 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:52:09,089 [Worker-25: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj
+2020-07-15 14:52:09,089 [Worker-25: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:52:10,761 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:52:10,762 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:52:10,763 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:52:10,764 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:52:40,271 [Worker-35: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/saurabh/ws/intz/test-ws/multi-module-test/parentproj
+2020-07-15 14:52:40,271 [Worker-35: Launching Executing clean in _home_saurabh_ws_intz_test-ws_multi-module-test_parentproj] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-07-15 14:52:41,884 [Worker-36: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:52:41,885 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:52:41,886 [Worker-36: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:52:41,887 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:53:12,825 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:53:12,825 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 14:53:12,826 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-15 14:53:12,826 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-15 15:57:44,337 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
